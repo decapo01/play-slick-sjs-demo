@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                             com.example.playslicksjsdemo.controllers.Application.index
+
+GET   /register com.example.playslicksjsdemo.controllers.Application.getRegister
+POST  /register com.example.playslicksjsdemo.controllers.Application.postRegister
+
+GET   /login    com.example.playslicksjsdemo.controllers.Application.getLogin
+POST  /login    com.example.playslicksjsdemo.controllers.Application.postLogin
+
+GET   /api/v1/customers   com.example.playslicksjsdemo.controllers.api.v1.CompanyApiV1Controller.index
+
+
+
+# Prefix must match `play.assets.urlPrefix`
+GET        /assets/*file                 controllers.Assets.at(file)
+GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)
